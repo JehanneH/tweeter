@@ -26,6 +26,10 @@
   font-weight: 600;
   outline: none;
   resize: none;
-  width: 100%
+  width: 100%;
+  margin-top: 20px;
+ }
 
+ .color-red {
+  color: red;
  }
