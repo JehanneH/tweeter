@@ -1,0 +1,23 @@
+/*
+ * Nav related css
+ */
+
+ nav {
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  padding: 1.5em;
+  justify-content: space-between;
+ }
+
+.title, {
+  font-family: 'Bungee', cursive, sans-serif;
+  font-size: 30px
+}
+
+.write {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+

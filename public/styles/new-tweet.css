@@ -1,0 +1,31 @@
+/*
+ * New tweet form related css
+ */
+
+ button {
+   background-color: #4056A1;
+   color: #FFFFFF;
+   font-family: 'Bungee', cursive, sans-serif;
+   border: none;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+ .counter {
+   float: right;
+   font-family: 'Bungee', cursive, sans-serif;
+   color: #545149;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+ #tweet-text {
+  background: transparent;
+  border-width: 0px 0px 3px 0px;
+  border-color: #545149;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  outline: none;
+  resize: none;
+  width: 100%
+
+ }
