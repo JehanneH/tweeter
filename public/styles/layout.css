@@ -39,41 +39,52 @@ nav {
   padding: 10px;
 }
 
-.tweet-container {
+.tweets {
   border: solid #545149;
   background-color: #f3ebe1;
   margin-bottom: 10px;
 }
 
-.tweet-container:hover {
+.tweets:hover {
   box-shadow: 8px 8px 0 0 rgba(87, 160, 189, 0.4);
 }
 
-.tweet-container header {
+.tweets header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.name {
-  margin-left: 20px;
-  font-weight: 300;
+.person-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .account {
   margin-right: 20px;
   color: rgba(83, 184, 224, 0.589);
   font-weight: 300;
+  float: right;
+  display: none;
+} 
+
+
+.icon {
+  width: 40px;
+  margin: 15px;
 }
 
-.account{ 
-  display:none; 
+.person {
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-.tweet-container:hover .account {
+
+.tweets:hover .account {
   display:block;
-}
+} 
 
-.tweet {
+.tweet-text {
   border: solid #545149;
   border-width: 0px 0px 3px 0px;
   margin: 10px;

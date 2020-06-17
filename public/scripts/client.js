@@ -38,11 +38,14 @@ $(document).ready(function() {
     const htmlTweet = `
     <article class="tweets">
       <header>
-        <h4 class="name">${tweet.user.name}</h4>
-        <img src="${tweet.user.avatars}"
+      <div class="person-info">
+        <img class="icon" src="${tweet.user.avatars}" />
+        <h4 class="person">${tweet.user.name}</h4>
+      </div>
         <h4 class="account">${tweet.user.handle}</h4>
+      
       </header>
-      <div class="tweet">
+      <div class="tweet-text">
         <p>${tweet.content.text}</p>
       </div>
       <footer>
