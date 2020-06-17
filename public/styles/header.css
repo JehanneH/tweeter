@@ -1,17 +1,23 @@
 
 /*
- * Nav related css
+ * Header related css
  */
+
 
 .avatar-header {
   background-color: #cc9654;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   height: 400px;
   width: 100%;
+  margin-top: 120px;
 }
 
 .avatar, .name {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.i {
+  align: right
 }

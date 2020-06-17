@@ -27,7 +27,8 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
-      <div class="write"> <span class="bold" style="font-weight:900">Write</span> a new tweet</div>
+      <div class="write"> <span style="font-weight:900">Write</span> a new tweet</div>
+      <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
       <!-- I need to put down arrows in here -->
     </nav>
 
@@ -43,7 +44,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method=POST action=/tweets/>
+        <form method=POST action=/tweets>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>

@@ -9,6 +9,9 @@
   height: 120px;
   padding: 1.5em;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
  }
 
 .title {
@@ -19,5 +22,3 @@
 .write {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-

@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-  
+  const tweetLimit = 140
   $('#tweet-text').on('keyup', function() {
-    let charsLeft = 140 - $(this).val().length;
+    let charsLeft = tweetLimit - $(this).val().length;
 
     let counter = $(this)
       .siblings()
