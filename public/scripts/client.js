@@ -85,5 +85,9 @@ $(document).ready(function() {
     })
   });
 
+  // GET request that fetches tweets from /tweets
+  const loadTweets = function() {
+
+  }
 
 });

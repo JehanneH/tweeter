@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ 
 html {
   box-sizing: border-box;
 }
@@ -29,6 +30,7 @@ nav {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* main container for submit tweet and other tweets */
 .container {
   display: flex;
   width: 90%;
@@ -39,51 +41,62 @@ nav {
   padding: 10px;
 }
 
+/* tweet container */
 .tweets {
   border: solid #545149;
   background-color: #f3ebe1;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
+/* add shadow on container when hover */
 .tweets:hover {
   box-shadow: 8px 8px 0 0 rgba(87, 160, 189, 0.4);
 }
 
+/* header of tweet container, icon, person, account */
 .tweets header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* icon and name of person */
 .person-info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
+/* the @ account */
 .account {
-  margin-right: 20px;
+  margin: 20px;
   color: rgba(83, 184, 224, 0.589);
   font-weight: 300;
   float: right;
   display: none;
 } 
 
+/* when over container the @ account will appear */
+.tweets:hover .account {
+  display: block;
+} 
 
+/* icon associated with account */
 .icon {
   width: 40px;
+  height: 40px;
   margin: 15px;
 }
 
+/* name of person associated with account */
 .person {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-.tweets:hover .account {
-  display:block;
-} 
-
+/* the text of the tweet */
 .tweet-text {
   border: solid #545149;
   border-width: 0px 0px 3px 0px;
@@ -91,6 +104,7 @@ nav {
   color: #545149;
 }
 
+/* bottom of tweet container */
 footer {
   font-size: 12px;
   margin-left: 10px;
@@ -100,11 +114,13 @@ footer {
   justify-content: space-between;
 }
 
+/* flag, retweet, heart symbols */
 footer div {
 color: #4056A1;
 margin-right: 5px;
 }
 
+/* number of days since the tweet was written  !! this needs to be fixed to be accurate !! */
 footer p {
   margin-top: 5px
 }
