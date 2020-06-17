@@ -3,11 +3,11 @@
  * Nav related css
  */
 
-header {
+.avatar-header {
   background-color: #cc9654;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   height: 400px;
-  width: 100%
+  width: 100%;
 }
 
 .avatar, .name {

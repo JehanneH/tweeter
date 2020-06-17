@@ -18,7 +18,7 @@ html {
 body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: lightgrey;
+  background-color: #f3ebe1;
 }
 
 nav {
@@ -32,14 +32,61 @@ nav {
 .container {
   display: flex;
   width: 90%;
-  background-color: lightgrey;
+  background-color: #f3ebe1;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
-  border: dotted pink;
 }
 
-.tweet-containter {
-  border: solid
+.tweet-container {
+  border: solid #545149;
+  background-color: #f3ebe1;
 }
+
+.tweet-container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.tweet-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name {
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.account {
+  margin-right: 10px;
+  color: grey;
+  font-weight: 300;
+}
+
+.tweet {
+  border: solid #545149;
+  border-width: 0px 0px 3px 0px;
+  margin: 10px;
+  color: #545149;
+}
+
+footer {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div {
+color: #4056A1;
+margin-right: 5px;
+}
+
+footer p {
+  margin-top: 5px
+}
+
