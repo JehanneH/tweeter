@@ -4,35 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// object from initial-tweets.json 
-  // temp hard coded, but later will be loading from Express server via AJAX GET req
+
 
 $(document).ready(function() {
-
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png",
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
 
 // function createTweetElement that takes in a tweet object
   // and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
@@ -62,18 +36,26 @@ $(document).ready(function() {
   `
     return htmlTweet;
   }
-  // function takes in array of tweet objects and appends each one to the #tweets-container
+  // function takes in array of tweet objects and appends each one to the .tweet-container
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
-      $('#tweet-list').append(createTweetElement(tweet));
+      $('#tweet-list').prepend(createTweetElement(tweet));
     }
   }
-  // renderTweets(data);
 
   // AJAX POST request 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    //console.log("Registered");
+
+    const tweetLimit = 140;
+    const tweetText = $('#tweet-text').val();
+
+    if (tweetText.length > tweetLimit) {
+      alert("Tweet too long!");
+    } else if (tweetText === '') {
+      alert("Tweet is empty!");
+    }
+
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -83,6 +65,7 @@ $(document).ready(function() {
       // $('.tweet-container').empty();
       // renderTweets(data);
     })
+
   });
 
   // AJAX GET request that fetches tweets from /tweets
@@ -101,5 +84,5 @@ $(document).ready(function() {
       })
     })
   }
-  loadTweets()
+  loadTweets();
 });

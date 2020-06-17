@@ -97,7 +97,7 @@ nav {
 }
 
 /* the text of the tweet */
-.tweet-text {
+.tweet-placeholder {
   border: solid #545149;
   border-width: 0px 0px 3px 0px;
   margin: 10px;
