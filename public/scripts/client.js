@@ -8,6 +8,8 @@
   // temp hard coded, but later will be loading from Express server via AJAX GET req
 
 $(document).ready(function() {
+
+
   const data = [
     {
       "user": {
@@ -49,7 +51,7 @@ $(document).ready(function() {
         <p>${tweet.content.text}</p>
       </div>
       <footer>
-        <p>${tweet.created_at}</p>
+        <p>${tweet.created_at} days ago </p>
         <div>
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
@@ -67,4 +69,21 @@ $(document).ready(function() {
     }
   }
   renderTweets(data);
-})
+
+  // AJAX POST request 
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    console.log("Registered");
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $(this).serialize()
+    }).then(function() {
+      console.log('success!', this)
+      $('.tweet-container').empty();
+      renderTweets(data);
+    })
+  });
+
+
+});
