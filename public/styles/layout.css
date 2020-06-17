@@ -42,10 +42,11 @@ nav {
 .tweet-container {
   border: solid #545149;
   background-color: #f3ebe1;
+  margin-bottom: 10px;
 }
 
 .tweet-container:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 8px 8px 0 0 rgba(87, 160, 189, 0.4);
 }
 
 .tweet-container header {
@@ -55,14 +56,21 @@ nav {
 }
 
 .name {
-  margin-left: 10px;
+  margin-left: 20px;
   font-weight: 300;
 }
 
 .account {
-  margin-right: 10px;
-  color: grey;
+  margin-right: 20px;
+  color: rgba(83, 184, 224, 0.589);
   font-weight: 300;
+}
+
+.account{ 
+  display:none; 
+}
+.tweet-container:hover .account {
+  display:block;
 }
 
 .tweet {
