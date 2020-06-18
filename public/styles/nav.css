@@ -24,6 +24,13 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.arrow {
+  position: absolute;
+  bottom: 1em;
+  right: 4.5em;
+  color: rgb(240, 209, 32);
+}
+
 /* media queries for Desktop */
 
 @media only screen and (min-width: 1024px) {

@@ -17,6 +17,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -28,7 +29,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
-      <div class="sub-title"> <span>Write</span> a new tweet</div>
+      <div class="sub-title"> <span>Write</span> a new tweet
+        <i class="arrow" ⬇️ ></i>
+      </div>
+      
       <!-- I need to put down arrows in here -->
     </nav>
 
@@ -47,7 +51,7 @@
       <section class="new-tweet">
         <div class="isa-error">
           <i class="fa fa-times-circle"></i>
-          <span> This isn't English class, no need to write an essay! </span>
+          <span> No need to write an essay, this isn't English class!</span>
           <i class="fa fa-times-circle"></i>
        </div>
        <div class="isa-warning">

@@ -5,7 +5,6 @@
  */
 
 
-
 $(document).ready(function() {
 
   // function to escape text to avoid xss
@@ -32,7 +31,7 @@ $(document).ready(function() {
         <p>${escape(tweet.content.text)}</p>
       </div>
       <footer>
-        <p>${tweet.created_at} days ago </p>
+        <p>${moment(tweet.created_at).fromNow()}</p>
         <div>
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
@@ -61,9 +60,19 @@ $(document).ready(function() {
     $('form').validate;
 
     if (tweetText.length > tweetLimit) {
-      $('.isa-error').slideDown(400);
+      $('.isa-error').slideDown();
+
+      setTimeout(function() {
+        console.log("hi")
+        $(".isa-error").slideUp();
+      }, 4000);
+
     } else if (tweetText === '') {
-      $('.isa-warning').slideDown(400);
+      $('.isa-warning').slideDown();
+
+      setTimeout(function() {
+        $(".isa-warning").slideUp();
+      }, 4000);
 
     } else {
       $.ajax({
