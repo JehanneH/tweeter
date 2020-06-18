@@ -8,7 +8,14 @@
 
 $(document).ready(function() {
 
-// function createTweetElement that takes in a tweet object
+  // function to escape text to avoid xss
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  // function createTweetElement that takes in a tweet object
   // and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function(tweet) {
     const htmlTweet = `
@@ -22,7 +29,7 @@ $(document).ready(function() {
       
       </header>
       <div class="tweet-placeholder">
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweet.content.text)}</p>
       </div>
       <footer>
         <p>${tweet.created_at} days ago </p>
@@ -36,6 +43,7 @@ $(document).ready(function() {
   `
     return htmlTweet;
   }
+
   // function takes in array of tweet objects and appends each one to the .tweet-container
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
@@ -50,11 +58,11 @@ $(document).ready(function() {
     const tweetLimit = 140;
     const tweetText = $('#tweet-text').val();
 
+    $('form').validate;
     if (tweetText.length > tweetLimit) {
-      alert("Tweet too long!");
-
+      $('.isa_error').html(`Your tweet is too long, pls cut it down!`).slideDown(400);
     } else if (tweetText === '') {
-      alert("Tweet is empty!");
+      $('.isa_warning').html(`Your tweet is empty! What's on your mind?`).slideDown(400);
 
     } else {
       $.ajax({
@@ -85,5 +93,4 @@ $(document).ready(function() {
     })
   }
   // loadTweets(); ???
-
 });

@@ -8,14 +8,14 @@
    font-family: 'Bungee', cursive, sans-serif;
    border: none;
    margin-top: 15px;
-   margin-bottom: 15px;
+   margin-bottom: 20px;
  }
  .counter {
    float: right;
    font-family: 'Bungee', cursive, sans-serif;
    color: #545149;
    margin-top: 15px;
-   margin-bottom: 15px;
+   margin-bottom: 20px;
  }
 
  #tweet-text {

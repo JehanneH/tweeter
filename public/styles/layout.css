@@ -100,7 +100,7 @@ nav {
 .tweet-placeholder {
   border: solid #545149;
   border-width: 0px 0px 3px 0px;
-  margin: 10px;
+  margin: 20px;
   color: #545149;
 }
 
@@ -125,3 +125,31 @@ footer p {
   margin-top: 5px
 }
 
+
+.isa_error, .isa_warning {
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 80%;
+  display: none;
+}
+
+.isa_warning {
+  color: #eba50d;
+  background-color: #FEEFB3;
+  border: solid #eba50d;
+  text-align: center;
+}
+.isa_error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  border: solid #D8000C;
+  text-align: center;
+}
+.isa_error i, .isa_warning i {
+  margin: 10px 10px;
+  font-size: 2em;
+  vertical-align: middle;
+}

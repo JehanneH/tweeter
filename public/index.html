@@ -24,6 +24,7 @@
   </head>
 
   <body>
+
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
@@ -40,9 +41,21 @@
         <h2> Dana Scully</h2>
     </div>
     </header>
+
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="isa_error">
+          <i class="fa fa-times-circle"></i>
+          Your tweet is too long, pls cut it down!
+          <i class="fa fa-times-circle"></i>
+       </div>
+       <div class="isa_warning">
+        <i class="fa fa-warning"></i>
+        Your tweet is empty! What's on your mind?
+        <i class="fa fa-warning"></i>
+      </div>
+
         <form method=POST action=/tweets>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
@@ -51,15 +64,16 @@
           </div>
         </form>
       </section>
-<section id="tweet-list">
-      <article class="tweets">
+
+    <section id="tweet-list">
+
+      <!-- <article class="tweets">
         <header>
         <div class="person-info">
           <img class="icon" src="https://i.imgur.com/nlhLi3I.png" />
           <h4 class="person">Dana Scully</h4>
         </div>
           <h4 class="account">@scullyFBI</h4>
-
         </header>
         <div class="tweet-placeholder">
           <p>This is a tweet.</p>
@@ -72,7 +86,8 @@
             <i class="fa fa-heart" aria-hidden="true"></i>
           </div>
         </footer>
-      </article>
+      </article> -->
+
   </section>
     </main>
 
