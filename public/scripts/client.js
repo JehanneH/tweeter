@@ -21,7 +21,7 @@ $(document).ready(function() {
         <h4 class="account">${tweet.user.handle}</h4>
       
       </header>
-      <div class="tweet-text">
+      <div class="tweet-placeholder">
         <p>${tweet.content.text}</p>
       </div>
       <footer>
@@ -52,20 +52,21 @@ $(document).ready(function() {
 
     if (tweetText.length > tweetLimit) {
       alert("Tweet too long!");
+
     } else if (tweetText === '') {
       alert("Tweet is empty!");
+
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $(this).serialize()
+      }).then(function() {
+        // console.log('success!', this)
+        loadTweets();
+        $('#tweet-text').val("");
+      })
     }
-
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      data: $(this).serialize()
-    }).then(function() {
-      console.log('success!', this)
-      // $('.tweet-container').empty();
-      // renderTweets(data);
-    })
-
   });
 
   // AJAX GET request that fetches tweets from /tweets
@@ -78,11 +79,11 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'JSON'
       }).then(function(response) {
-        // console.log("response", response)
         $('.tweet-container').empty();
         renderTweets(response);
       })
     })
   }
-  loadTweets();
+  // loadTweets(); ???
+
 });
