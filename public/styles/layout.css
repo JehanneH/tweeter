@@ -126,7 +126,7 @@ footer p {
   margin-bottom: 2em;
 }
 
-
+/* error messages for empty tweet or above limit */
 .isa-error, .isa-warning {
   margin-right: 2em;
   margin-left: 2em;
@@ -153,4 +153,20 @@ footer p {
   margin: 10px 10px;
   font-size: 2em;
   vertical-align: middle;
+}
+
+/* media queries for Desktop */
+
+@media only screen and (min-width: 1024px) {
+
+  .container {
+    position: absolute;
+    float: right;
+    top: 5em;
+    right: 1em;
+    width: 65%;
+    margin: 1em;
+    padding: 0.10em;
+    z-index: 0;
+  }
 }

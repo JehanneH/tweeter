@@ -3,7 +3,6 @@
  * Header related css
  */
 
-
 .avatar-header {
   background-color: #cc9654;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
@@ -18,6 +17,38 @@
   align-items: center;
 }
 
-.i {
-  float: right
+h2 {
+  margin-top: 0.20em;
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+/* first word bold */
+span {
+  font-weight: 600;
+}
+
+/* media queries for Desktop */
+
+@media only screen and (min-width: 1024px) {
+
+  .avatar-header {
+    position: fixed;
+    height: 13em;
+    width: 25%;
+    margin-top: 6em;
+    margin-left: 1em;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+
+  img {
+    width: 60%;
+    margin-top: 0.9em;
+  }
+
 }
