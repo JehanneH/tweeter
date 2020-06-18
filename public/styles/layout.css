@@ -126,7 +126,7 @@ footer p {
 }
 
 
-.isa_error, .isa_warning {
+.isa-error, .isa-warning {
   margin-right: 80px;
   margin-left: 80px;
   margin-top: 10px;
@@ -136,19 +136,19 @@ footer p {
   display: none;
 }
 
-.isa_warning {
+.isa-warning {
   color: #eba50d;
   background-color: #FEEFB3;
   border: solid #eba50d;
   text-align: center;
 }
-.isa_error {
+.isa-error {
   color: #D8000C;
   background-color: #FFD2D2;
   border: solid #D8000C;
   text-align: center;
 }
-.isa_error i, .isa_warning i {
+.isa-error i, .isa-warning i {
   margin: 10px 10px;
   font-size: 2em;
   vertical-align: middle;
