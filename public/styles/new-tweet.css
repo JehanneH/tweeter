@@ -3,7 +3,7 @@
  */
 
  button {
-   background-color: #4056A1;
+   background-color: #a0c1b8;
    color: #FFFFFF;
    font-family: 'Bungee', cursive, sans-serif;
    border: none;
@@ -28,8 +28,13 @@
   resize: none;
   width: 100%;
   margin-top: 1em;
+  color: #545149;
  }
 
  .color-red {
   color: red;
+ }
+
+ .new-tweet {
+  display: none;
  }

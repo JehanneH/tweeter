@@ -45,12 +45,13 @@ nav {
 .tweets {
   border: solid #545149;
   background-color: #f3ebe1;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
   margin-bottom: 1em;
 }
 
 /* add shadow on container when hover */
 .tweets:hover {
-  box-shadow: 8px 8px 0 0 rgba(87, 160, 189, 0.4);
+  box-shadow: 8px 8px 0 0 #a0c1b8af;
 }
 
 /* header of tweet container, icon, person, account */
@@ -70,7 +71,7 @@ nav {
 /* the @ account */
 .account {
   margin: 1em;
-  color: rgba(63, 131, 158, 0.589);
+  color: #709fb09a;
   font-weight: 300;
   float: right;
   display: none;
@@ -116,11 +117,11 @@ footer {
 
 /* flag, retweet, heart symbols */
 footer div {
-color: #4056A1;
+color: #726a95;
 margin-right: 5px;
 }
 
-/* number of days since the tweet was written  !! this needs to be fixed to be accurate !! */
+/* time stamp */
 footer p {
   margin-top: 0;
   margin-bottom: 2em;
@@ -139,14 +140,14 @@ footer p {
 
 .isa-warning {
   color: #eba50d;
-  background-color: #FEEFB3;
+  background-color: #f4ebc1;
   border: solid #eba50d;
   text-align: center;
 }
 .isa-error {
-  color: #D8000C;
+  color: #cf363d;
   background-color: #FFD2D2;
-  border: solid #D8000C;
+  border: solid #cf363d;
   text-align: center;
 }
 .isa-error i, .isa-warning i {

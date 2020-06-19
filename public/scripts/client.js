@@ -14,6 +14,11 @@ $(document).ready(function() {
     return div.innerHTML;
   }
 
+  //
+  $('#arrow').click(function() {
+    $('.new-tweet').slideToggle();
+  })
+
   // function createTweetElement that takes in a tweet object
   // and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function(tweet) {
@@ -82,6 +87,7 @@ $(document).ready(function() {
       }).then(function() {
         loadTweets();
         $('#tweet-text').val("");
+        $('.counter').text(tweetLimit);
       })
     }
   });

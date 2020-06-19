@@ -4,7 +4,7 @@
  */
 
 .avatar-header {
-  background-color: #cc9654;
+  background-color: #709fb0;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   height: 400px;
   width: 100%;
@@ -50,5 +50,4 @@ span {
     width: 60%;
     margin-top: 0.9em;
   }
-
 }

@@ -4,7 +4,7 @@
 
  nav {
   display: flex;
-  background-color: #cc9654;
+  background-color: #709fb0;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   color: #FFFFFF;
   height: 120px;
@@ -18,17 +18,60 @@
 .title {
   font-family: 'Bungee', cursive, sans-serif;
   font-size: 30px;
+  margin-left: 0.5em;
 }
 
 .sub-title {
   font-family: 'Source Sans Pro', sans-serif;
+  margin-right: 0.5em;
 }
 
-.arrow {
+#arrow {
   position: absolute;
   bottom: 1em;
-  right: 4.5em;
-  color: rgb(240, 209, 32);
+  right: 5em;
+  color: #fbd46d;
+}
+
+.bounce {
+  display: inline-block;
+  position: relative;
+  -moz-animation: bounce 0.5s infinite linear;
+  -o-animation: bounce 0.5s infinite linear;
+  -webkit-animation: bounce 0.5s infinite linear;
+  animation: bounce 0.5s infinite linear;
+  color: 000;
+}
+
+@-webkit-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-moz-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-o-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-ms-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
 }
 
 /* media queries for Desktop */
@@ -36,8 +79,13 @@
 @media only screen and (min-width: 1024px) {
 
   nav {
-    z-index:1;
-    background-color: #4056A1;
+    z-index: 1;
+    background-color: #726a95;
     background-image: none;
   }
+
+  #arrow {
+    color: #fbd46d;
+  }
+  
 }
