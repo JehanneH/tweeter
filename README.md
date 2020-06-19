@@ -30,7 +30,7 @@ We began with starter code which was forked and cloned so that we could build up
 !["Desktop View with tweet box showing"](https://github.com/JehanneH/tweeter/blob/master/public/docs/Desktop-view.png?raw=true)
 ### Error message when tweet box is empty:
 !["Error message when tweet box is empty"](https://github.com/JehanneH/tweeter/blob/master/public/docs/error-message.png?raw=true)
-### Hover effect on the tweets:
+### Hover effect on the tweets, with tweet box toggled away:
 !["Hover effect on the tweets"](https://github.com/JehanneH/tweeter/blob/master/public/docs/hover-effect.png?raw=true)
 ### Mobile view:
 !["Mobile view"](https://github.com/JehanneH/tweeter/blob/master/public/docs/mobile-view.png?raw=true)
