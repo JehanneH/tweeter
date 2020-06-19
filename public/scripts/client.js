@@ -12,12 +12,12 @@ $(document).ready(function() {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
-  //
+  // link arrow in nav bar toggles new tweet box
   $('#arrow').click(function() {
     $('.new-tweet').slideToggle();
-  })
+  });
 
   // function createTweetElement that takes in a tweet object
   // and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
@@ -44,18 +44,18 @@ $(document).ready(function() {
         </div>
         </footer>
       </article>
-  `
+  `;
     return htmlTweet;
-  }
+  };
 
   // function takes in array of tweet objects and appends each one to the .tweets
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       $('#tweet-list').prepend(createTweetElement(tweet));
     }
-  }
+  };
 
-  // AJAX POST request 
+  // AJAX POST request
   $('form').on('submit', function(event) {
     event.preventDefault();
 
@@ -68,7 +68,6 @@ $(document).ready(function() {
       $('.isa-error').slideDown();
 
       setTimeout(function() {
-        console.log("hi")
         $(".isa-error").slideUp();
       }, 4000);
 
@@ -88,21 +87,20 @@ $(document).ready(function() {
         loadTweets();
         $('#tweet-text').val("");
         $('.counter').text(tweetLimit);
-      })
+      });
     }
   });
 
   // AJAX GET request that fetches tweets from /tweets
   const loadTweets = function() {
-
-      $.ajax({
-        url: '/tweets',
-        method: 'GET',
-        dataType: 'JSON'
-      }).then(function(response) {
-        $('#tweet-list').empty();
-        renderTweets(response);
-      })
-    }
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'JSON'
+    }).then(function(response) {
+      $('#tweet-list').empty();
+      renderTweets(response);
+    });
+  }
   loadTweets();
 });

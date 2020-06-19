@@ -15,7 +15,6 @@ html {
  * Global layout stuff
  */
 
-
 body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -45,7 +44,7 @@ nav {
 .tweets {
   border: solid #545149;
   background-color: #f3ebe1;
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
   margin-bottom: 1em;
 }
 
@@ -73,6 +72,7 @@ nav {
   margin: 1em;
   color: #709fb09a;
   font-weight: 300;
+  padding-top: 0.5em;
   float: right;
   display: none;
 } 
